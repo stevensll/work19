@@ -14,11 +14,11 @@
 #define MAX_BUFF_LEN 1000
 
 int main(){
-    mkfifo("r", 0644);
-    mkfifo("w", 0644);
+    mkfifo("in", 0644);
+    mkfifo("out", 0644);
 
-    int fd_w = open("w", O_WRONLY);
-    int fd_r = open("r", O_RDONLY);
+    int fd_w = open("in", O_WRONLY);
+    int fd_r = open("out", O_RDONLY);
 
     while(1){
         char buff[MAX_BUFF_LEN];

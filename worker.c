@@ -12,8 +12,8 @@
 #define MAX_BUFF_LEN 1000
 
 int main(){
-    int fd1 = open("w", O_RDONLY);
-    int fd2 = open("r", O_WRONLY);
+    int fd1 = open("in", O_RDONLY);
+    int fd2 = open("out", O_WRONLY);
 
     while(1){
         char buff[MAX_BUFF_LEN];
